@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      profile: ${application_profile:dev}
+      server:
+        git:
+          uri: https://github.com/LLLLLIu/config-repo-demo.git
+          search-paths:
+          - /${spring.cloud.config.profile}
+server:
+  port: 9500

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      profile: ${application_profile:dev}
+      uri: http://localhost:9500
+      label: master
